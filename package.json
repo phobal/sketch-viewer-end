@@ -1,0 +1,16 @@
+{
+  "name": "sketch-viewer",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "respository": {
+    "type": "git",
+    "url": "http://18.24.28.106/root/sketch-viewer.git"
+  },
+  "keywords": [],
+  "author": "phobal <phobal@126.com> (https://github.com/phobal)",
+  "license": "MIT"
+}
