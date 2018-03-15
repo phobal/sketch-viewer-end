@@ -12,5 +12,11 @@
   },
   "keywords": [],
   "author": "phobal <phobal@126.com> (https://github.com/phobal)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.30.0",
+    "koa": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.10"
+  }
 }
