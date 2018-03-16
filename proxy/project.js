@@ -1,10 +1,10 @@
 const { ProjectModel } = require('../models');
 
 module.exports = class ProjectProxy {
-  static async newAndSave(data) {
+  static newAndSave(data) {
     const project = ProjectModel.insertMany(data);
   }
-  static async findAll() {
+  static findAll() {
     const projects = ProjectModel.find({});
     return projects;
   }
