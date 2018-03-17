@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:test": "rsync -av --exclude=node_modules ./* phobal@47.93.48.236:/home/phobal/webserver/sketch-viewer "
   },
   "respository": {
     "type": "git",
@@ -18,6 +19,9 @@
     "koa": "^2.5.0",
     "koa-body": "^2.5.0",
     "koa-router": "^7.4.0",
-    "mongoose": "^5.0.10"
+    "koa-static": "^4.0.2",
+    "koa-static-cache": "^5.1.2",
+    "mongoose": "^5.0.10",
+    "unzipper": "^0.8.11"
   }
 }
