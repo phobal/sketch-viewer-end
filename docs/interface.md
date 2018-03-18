@@ -93,3 +93,20 @@
     "exeMsg": null
 }
 ```
+
+5. 上传 .zip 文件
+
+描述： 上传 zip 格式的设计稿文件  
+接口名称: `/upload`  
+请求方式: `POST`,  
+请求参数: stream 文件流
+返回值:
+
+``` json
+{
+   "success": true,
+    "data": null,
+    "exeCode": 200,
+    "exeMsg": null
+}
+```

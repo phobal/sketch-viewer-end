@@ -15,6 +15,7 @@
   "author": "phobal <phobal@126.com> (https://github.com/phobal)",
   "license": "MIT",
   "dependencies": {
+    "busboy": "^0.2.14",
     "config": "^1.30.0",
     "koa": "^2.5.0",
     "koa-body": "^2.5.0",
