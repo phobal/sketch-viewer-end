@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('config');
 const ProjectModel = require('./project');
+const SubProjectModel = require('./subproject');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.get('db'), {
@@ -16,4 +17,5 @@ mongoose.connect(config.get('db'), {
 
 module.exports = {
   ProjectModel,
+  SubProjectModel,
 }

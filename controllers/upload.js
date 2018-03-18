@@ -17,7 +17,7 @@ module.exports = class UploadZip {
     }
   }
   static unzip(filename) {
-    const inputPath = path.resolve(__dirname, `../upload/${filename}.zip`)
+    const inputPath = path.resolve(__dirname, `../upload/${filename}`)
     const outputPath = path.resolve(__dirname, '../upload');
     fs.createReadStream(inputPath)
     .pipe(unzipper.Extract({ path: outputPath }));
