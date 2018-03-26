@@ -6,6 +6,7 @@ const path = require('path');
 const staticCache = require('koa-static-cache');
 const koaStatic = require('koa-static');
 const unzipper = require('unzipper');
+const cors = require('@koa/cors');
 
 const routerConfig = require('./router-config');
 const responseMiddleware = require('./middlewares/response');
@@ -13,6 +14,7 @@ const responseMiddleware = require('./middlewares/response');
 const app = new Koa();
 app
   .use(koaBody())
+  .use(cors({ credentials: true, maxAge: 2592000 }))
   // .use(koaStatic(path.resolve(__dirname, './upload')))
   .use(koaStatic(path.resolve(__dirname, './upload/')))
   // .use(serve('/upload', path.resolve(__dirname, './upload')))
