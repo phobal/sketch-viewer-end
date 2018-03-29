@@ -17,6 +17,7 @@ app
   .use(cors({ credentials: true, maxAge: 2592000 }))
   // .use(koaStatic(path.resolve(__dirname, './upload')))
   .use(koaStatic(path.resolve(__dirname, './upload/')))
+  .use(koaStatic(path.resolve(__dirname, './avator/')))
   // .use(serve('/upload', path.resolve(__dirname, './upload')))
   .use(responseMiddleware.init)
   .use(routerConfig.api.routes())

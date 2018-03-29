@@ -9,8 +9,17 @@ module.exports = class UploadZip {
       path: path.resolve(__dirname, '../upload')
     });
     if (result.success) {
-
       this.unzip(result.data.filename);
+      ctx.body = ctx.util.resuccess(result.data.filePath);
+    } else {
+      ctx.body = ctx.util.refail(null, 10001, ctx.errors);
+    }
+  }
+  static async uploadImg(ctx) {
+    let result = await uploadFile(ctx, {
+      path: path.resolve(__dirname, '../avator')
+    })
+    if (result.success) {
       ctx.body = ctx.util.resuccess(result.data.filePath);
     } else {
       ctx.body = ctx.util.refail(null, 10001, ctx.errors);

@@ -9,6 +9,7 @@ exports.api = apiRouter
   .put('/project', project.updateById)
   .delete('/project', project.deleteById)
   .post('/upload', upload.uploadZip.bind(upload))
+  .post('/upload/avator', upload.uploadImg)
   .post('/subproject', subproject.newAndSave)
   .get('/subproject', subproject.findAll)
   .put('/subproject', subproject.updateById)

@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
   name: String,
   description: String,
+  imgSrc: String,
   createdAt: {
     type: Date,
     default: Date.now,

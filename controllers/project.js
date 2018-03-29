@@ -2,10 +2,11 @@ const { ProjectProxy } = require('../proxy');
 
 module.exports = class Project {
   static async newAndSave(ctx) {
-    const { name, description } = ctx.request.body;
+    const { name, description, imgSrc } = ctx.request.body;
     const saveQuery = {
       name,
       description,
+      imgSrc,
     };
     if (ctx.errors) {
       ctx.body = ctx.util.refail(null, 10001, ctx.errors);

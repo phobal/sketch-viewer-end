@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish:test": "rsync -av --exclude=node_modules ./* phobal@47.93.48.236:/home/phobal/webserver/sketch-viewer "
+    "publish:test": "rsync -av --exclude=node_modules ./* phobal@47.93.48.236:/home/phobal/webserver/sketch-viewer ",
+    "publish:prod": "rsync -av --exclude=node_modules ./* monday@192.168.26.124:/home/monday/fengbo/sketch-viewer "
   },
   "respository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "author": "phobal <phobal@126.com> (https://github.com/phobal)",
   "license": "MIT",
   "dependencies": {
+    "@koa/cors": "^2.2.1",
     "busboy": "^0.2.14",
     "config": "^1.30.0",
     "koa": "^2.5.0",
