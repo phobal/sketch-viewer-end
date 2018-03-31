@@ -10,7 +10,7 @@
   },
   "respository": {
     "type": "git",
-    "url": "http://118.24.28.106/root/sketch-viewer.git"
+    "url": "https://github.com/phobal/sketch-viewer-end.git"
   },
   "keywords": [],
   "author": "phobal <phobal@126.com> (https://github.com/phobal)",
@@ -23,7 +23,6 @@
     "koa-body": "^2.5.0",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
-    "koa-static-cache": "^5.1.2",
     "mongoose": "^5.0.10",
     "unzipper": "^0.8.11"
   }
