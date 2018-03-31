@@ -3,7 +3,6 @@ const koaBody = require('koa-body');
 const fs = require('fs');
 const config = require('config');
 const path = require('path');
-const staticCache = require('koa-static-cache');
 const koaStatic = require('koa-static');
 const unzipper = require('unzipper');
 const cors = require('@koa/cors');
@@ -15,10 +14,8 @@ const app = new Koa();
 app
   .use(koaBody())
   .use(cors({ credentials: true, maxAge: 2592000 }))
-  // .use(koaStatic(path.resolve(__dirname, './upload')))
   .use(koaStatic(path.resolve(__dirname, './upload/')))
   .use(koaStatic(path.resolve(__dirname, './avator/')))
-  // .use(serve('/upload', path.resolve(__dirname, './upload')))
   .use(responseMiddleware.init)
   .use(routerConfig.api.routes())
   .use(routerConfig.api.allowedMethods())
@@ -54,4 +51,3 @@ function unzip() {
   fs.createReadStream(inputPath)
   .pipe(unzipper.Extract({ path: outputPath }));
 }
-// unzip();
